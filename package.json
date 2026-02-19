@@ -1,6 +1,6 @@
 {
   "name": "upload-widget",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "bunx --bun vite",
@@ -15,6 +15,7 @@
     "lucide-react": "0.564.0",
     "react": "18",
     "react-dom": "18",
+    "react-dropzone": "15.0.0",
     "tailwind-merge": "3.4.1",
     "tailwind-variants": "3.2.2",
     "tailwindcss": "4.1.18"
