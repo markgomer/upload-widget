@@ -8,8 +8,8 @@ export function UploadWidgetDropzone() {
       "image/jpeg": [],
       "image/png": []
     },
-    ondrop(acceptedFiles: any) {
       console.log(acceptedFiles)
+    onDrop(acceptedFiles: any) {
     }
   }
   const {
