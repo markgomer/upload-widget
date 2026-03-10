@@ -4,7 +4,14 @@ interface UploadFileToStorageParams {
   file: File;
 }
 
-export async function uploadFileToStorage({ file }: UploadFileToStorageParams) {
+interface uploadFileToStorageOpts {
+  signal?: AbortSignal
+}
+
+export async function uploadFileToStorage(
+  { file }: UploadFileToStorageParams,
+  opts?: uploadFileToStorageOpts
+) {
   const data = new FormData();
 
   data.append("file", file);
@@ -14,6 +21,7 @@ export async function uploadFileToStorage({ file }: UploadFileToStorageParams) {
     data,
     {
       headers: { "Content-Type": "multipart/form-data" },
+      signal: opts?.signal
     }
   );
 
