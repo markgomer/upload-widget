@@ -22,7 +22,6 @@ export function compressImage({
   quality = 1,
 }: CompressImageParams) {
   const allowedFileTypes = [
-    "image/jpg",
     "image/jpeg",
     "image/png",
     "image/webp",

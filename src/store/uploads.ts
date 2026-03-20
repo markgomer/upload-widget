@@ -48,8 +48,8 @@ export const useUploads = create<UploadState, [["zustand/immer", never]]>(
       try {
         const compressedFile = await compressImage({
           file: upload.file,
-          maxWidth: 500,
-          maxHeight: 500,
+          maxWidth: 1000,
+          maxHeight: 1000,
           quality: 0.8,
         });
         updateUpload(uploadId, { compressedSizeInBytes: compressedFile.size })
