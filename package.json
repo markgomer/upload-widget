@@ -1,6 +1,6 @@
 {
   "name": "upload-widget",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "private": true,
   "scripts": {
     "dev": "bunx --bun vite",
@@ -12,9 +12,10 @@
   "dependencies": {
     "@radix-ui/react-collapsible": "1.1.12",
     "@radix-ui/react-progress": "1.1.8",
-    "@radix-ui/react-slot": "^1.2.4",
+    "@radix-ui/react-scroll-area": "1.2.10",
+    "@radix-ui/react-slot": "1.2.4",
     "@tailwindcss/vite": "4.1.18",
-    "axios": "^1.13.6",
+    "axios": "1.13.6",
     "immer": "11.1.4",
     "lucide-react": "0.564.0",
     "motion": "12.34.3",
