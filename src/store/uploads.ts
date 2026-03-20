@@ -91,6 +91,7 @@ export const useUploads = create<UploadState, [["zustand/immer", never]]>(
     }
 
     function retryUpload(uploadId: string) {
+      updateUpload(uploadId, { status: "progress", abortController: undefined });
       processUpload(uploadId);
     }
 
