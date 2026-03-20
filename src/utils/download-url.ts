@@ -1,22 +1,16 @@
-export const downloadUrl = async (url: string) => {
+export const downloadUrl = (url: string) => {
   try {
-    const response = await fetch(url, { mode: "cors" });
-    const blob = await response.blob();
-
-    const link = document.createElement("a");
-
     const urlObj = new URL(url);
     const pathname = urlObj.pathname;
-    const segments = pathname
-      .split("/")
-      .filter((segment) => segment.length > 0);
-    const filename = segments.length > 0 ? segments[segments.length - 1] : null;
+    const segments = pathname.split("/").filter((s) => s.length > 0);
+    const filename = segments.at(-1);
 
     if (!filename) {
       throw new Error("URL does not contain a valid filename");
     }
 
-    link.href = window.URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
     link.download = filename;
     link.target = "_blank"; // fallback se o download for bloqueado
     document.body.appendChild(link);
